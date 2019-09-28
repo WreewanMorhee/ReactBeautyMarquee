@@ -2,12 +2,13 @@ const WebpackNotifierPlugin = require('webpack-notifier');
 
 module.exports = {
     entry: {
-        'js_lib/App': './src/App.js',
+        // 'dist/BeautyMarquee': './src/BeautyMarquee/BeautyMarquee.js',
+        'dist/App': './src/App.js',
     },
     output: {
         path: __dirname,
         filename: '[name].js',
-        // library: 'UIUXStore',
+        // library: 'BeautyMarquee',
     },
     /**
      * loaders 對應使用規則

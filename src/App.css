@@ -1,12 +1,24 @@
-.test-box {
+.test1 {
   width: 50vw;
   margin: 0 auto;
-  font-size: 3.3vw;
+  font-size: 3.5vw;
+  color: #dc508b;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
-.verticla-test {
-  width: 50px;
-  height: 40vh;
+.test2 {
+  flex: 1;
+  height: 70vh;
   writing-mode: vertical-lr;
-  font-size: 50px;
+  font-size: 3vw;
+  font-weight: bold;
+}
+
+.bottom-box {
+  width: 70vw;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

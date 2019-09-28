@@ -1,18 +1,41 @@
 const App = () => (
-  <>
-    <div className='test-box'>
-       <BeautyMarquee desktop_speed={200} mobile_speed={100}>
-        test
-       </BeautyMarquee>
-    </div>
+    <div className='box'>
+      <div className='top-box'>
+        <div className='test1'>
+           <BeautyMarquee desktop_speed={200} mobile_speed={100}>
+            React Beauty Marquee
+           </BeautyMarquee>
+        </div>
 
-    <div className='verticla-test'>
-      <BeautyMarquee desktop_speed={50} mobile_speed={100} vertical>
-        aa bb cc ss dd
-      </BeautyMarquee>
+        <div className='test1'>
+           <BeautyMarquee reverse desktop_speed={200} mobile_speed={100}>
+            React Beauty Marquee
+           </BeautyMarquee>
+        </div>
+      </div>
+
+      <div className='bottom-box'>
+        <div className='test2'>
+          <BeautyMarquee desktop_speed={50} mobile_speed={100} vertical >
+            歡迎使用全世界最棒的跑馬燈
+          </BeautyMarquee>
+        </div>
+
+        <div className='test2'>
+          <BeautyMarquee desktop_speed={50} mobile_speed={100} vertical reverse>
+            世界最高のマーキーへようこそ
+          </BeautyMarquee>
+        </div>
+
+        <div className='test2'>
+          <BeautyMarquee desktop_speed={50} mobile_speed={100} vertical >
+            세계 최고의 천막에 오신 것을 환영합니다
+          </BeautyMarquee>
+        </div>
+      </div>
     </div>
-  </>
 )
+
 
 
 
@@ -20,6 +43,7 @@ const App = () => (
 
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import BeautyMarquee from './BeautyMarquee/BeautyMarquee';
+import BeautyMarquee from './BeautyMarquee/BeautyMarquee'
+import Slick from 'react-slick'
 import './App.css'
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'))
