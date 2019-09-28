@@ -8,28 +8,27 @@ export const MarqueeBox = styled.div`
     if (vertical) {
       return reverse ? 'flex-start' : 'flex-end'
     }
-    return reverse ? 'flex-end' : 'flex-start'
+    return reverse ? 'flex-start' : 'flex-end'
   }};
 `
 
 export const MarqueeList = styled.ul`
   display: flex;
-  flex-wrap: wrap;
-  min-width: ${({vertical}) => vertical ? 100 : 200}%;
-  min-height: ${({vertical}) => vertical ? 200 : 100}%;
-  animation: ${({vertical, reverse}) => {
-    if (vertical) {
-      return reverse ? v_marquee_effect_r : v_marquee_effect
-    }
-    return reverse ? h_marquee_effect_r : h_marquee_effect
-  }} 5s linear infinite;
-  animation-duration: ${({duration}) => duration}s
+  flex-wrap: nowrap;
+  width: auto;
+  height: auto;
 `
 
 export const MarqueeItem = styled.li`
- width: ${({vertical}) => vertical ? 100 : 50}%;
- height: ${({vertical}) => vertical ? 50 : 100}%;
+  width: auto;
+  height: auto;
+  min-width: ${({ vertical, min_size }) => (vertical ? "" : min_size)}px;
+  min-height: ${({ vertical, min_size }) => (vertical ? min_size : "")}px;
+  padding: ${({ vertical, gap }) => (vertical ? gap / 2 : 0)}px
+    ${({ vertical, gap }) => (vertical ? 0 : gap / 2)}px;
+  white-space: pre;
 `
+
 
 
 
