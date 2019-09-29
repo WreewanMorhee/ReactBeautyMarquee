@@ -55,10 +55,10 @@ const App = () => (
 
       <div className='img-wall'>
         {Array(2).fill().map((_, index) => (
-          <BeautyMarquee desktop_speed={150} mobile_speed={100} reverse={index === 1}>
+          <BeautyMarquee key={`index-${index + 1}`} desktop_speed={150} mobile_speed={100} reverse={index === 1}>
             <div className='img-bar'>
               {Array(6).fill().map((_, index2) => (
-                 <img src={`./images/${index2 + 1}.jpg`} />
+                 <img key={`index2-${index2 + 1}`} src={`./images/${index2 + 1}.jpg`} />
               ))}
             </div>
           </BeautyMarquee>
