@@ -29,6 +29,10 @@ export const MarqueeItem = styled.li`
   white-space: pre;
 `
 
+export const MarqueeText = styled.span`
+  display: inline-block;
+`
+
 
 
 
