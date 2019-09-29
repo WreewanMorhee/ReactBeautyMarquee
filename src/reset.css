@@ -1,0 +1,153 @@
+html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, audio, canvas, details, figcaption, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, summary, time, video {
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+
+body {
+  line-height: 1;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+article, aside, dialog, figure, footer, header, hgroup, nav, section, blockquote {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+ol {
+  list-style: none;
+}
+
+ul {
+  list-style: none;
+}
+
+ul ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none;
+}
+
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+mark {
+  background: none;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input[type=submit], input[type=button], button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  vertical-align: middle;
+}
+
+input {
+  background: transparent;
+  outline: none;
+  border: none;
+  border-radius: 0;
+}
+
+input, select, a img {
+  vertical-align: middle;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/*-------------------------
+
+           a
+
+-------------------------*/
+a,
+button {
+  text-decoration: none;
+  -webkit-transition: all ease-in-out 0.2s;
+  -moz-transition: all ease-in-out 0.2s;
+  -ms-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+}
+
+a:focus,
+button:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+html body .mobile-show-inline {
+  display: none;
+}
+
+html body .mobile-show-block {
+  display: none;
+}
+
+html body .desktop-none {
+  display: none;
+}
+
+.display-none {
+  display: none;
+}
+
+.display-flex {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  html body .mobile-none {
+    display: none;
+  }
+
+  html body .mobile-show-inline {
+    display: inline;
+  }
+
+  html body .mobile-show-block {
+    display: block;
+  }
+}

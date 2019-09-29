@@ -1,10 +1,37 @@
+html, body {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.box {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
 .test1 {
-  width: 50vw;
+  width: 80vw;
   margin: 0 auto;
-  font-size: 3.5vw;
+  font-size: 6.5vw;
   color: #dc508b;
   font-weight: bold;
   letter-spacing: 2px;
+  overflow: hidden;
+  margin-top: 1vh;
+  min-height: 15vh;
+}
+
+.img-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+img {
+  width: 150px;
+  min-width: 150px;
+  height: auto;
+  margin-left: 50px;
 }
 
 .test2 {
@@ -13,12 +40,80 @@
   writing-mode: vertical-lr;
   font-size: 3vw;
   font-weight: bold;
+  letter-spacing: 4px;
+}
+
+.test2 .test-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .bottom-box {
-  width: 70vw;
+  width: 50vw;
   margin: 0 auto;
+  box-sizing: border-box;
+  padding-top: 3.5vh;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.beauty-marquee-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-wall {
+  width: 100vw;
+  height: 66vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+
+.img-wall .img-bar {
+  width: 100%
+}
+
+.img-wall .img-bar:last-child {
+  margin-top: 2vh;
+}
+
+.img-wall .img-bar img {
+  height: 32vh;
+  width: auto;
+  margin-left: 5vw;
+}
+
+.second-box {
+  width: 100vw;
+  padding-top: 5vh;
+  background: #fff6ee;
+  padding-bottom: 10vh;
+}
+
+.title {
+  font-size: 6vw;
+  font-weight: bold;
+  text-align: center;
+}
+
+.title2 {
+  margin-top: 5vh;
+}
+
+.html {
+  display: flex;
+  flex-direction: column;
+  width: 55vw;
+  margin: 0 auto;
+  line-height: 1.8;
+  margin-top: 8vh;
 }
