@@ -19,11 +19,11 @@ import BeautyMarquee from 'react-beauty-marquee'
 
 const DemoComp = () => (
   <div className='react-beauty-marquee'>  //  step1. draw the region of marquee and adjust its position in this div
-       <BeautyMarquee stop_on_box_hover desktop_speed={200} mobile_speed={100}>  //  step3. once you have your marquee content CSS done, add the BeautyContent component to trigger it !
-              <div className='outer-box'>  //   step2. adjust the content of marquee with your own CSS in this div and add content into it
-                     /*  the content you want to the marquee */
-              </div>
-       </BeautyMarquee >
+    <BeautyMarquee stop_on_box_hover desktop_speed={200} mobile_speed={100}>  //  step3. once you have your marquee content CSS done, add the BeautyContent component to trigger it !
+      <div className='outer-box'>  //   step2. adjust the content of marquee with your own CSS in this div and add content into it
+        /*  the content you want to the marquee */
+      </div>
+    </BeautyMarquee >
   </div>
 )
 ```
