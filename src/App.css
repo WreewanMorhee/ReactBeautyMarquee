@@ -11,8 +11,9 @@ html, body {
 
 .test1 {
   width: 80vw;
+  height: 15vh;
   margin: 0 auto;
-  font-size: 6.5vw;
+  font-size: 5.5vw;
   color: #dc508b;
   font-weight: bold;
   letter-spacing: 2px;
@@ -27,20 +28,23 @@ html, body {
   justify-content: space-evenly;
 }
 
-img {
+/* img {
   width: 150px;
   min-width: 150px;
   height: auto;
   margin-left: 50px;
+} */
+.test2 {
+  width: 20vw;
+  height: 70vh;
 }
 
-.test2 {
-  flex: 1;
-  height: 70vh;
+.test2 .text-text {
   writing-mode: vertical-lr;
   font-size: 3vw;
   font-weight: bold;
   letter-spacing: 4px;
+  white-space: pre;
 }
 
 .test2 .test-box {
@@ -79,7 +83,8 @@ img {
 }
 
 .img-wall .img-bar {
-  width: 100%
+  width: 100%;
+  display: flex;
 }
 
 .img-wall .img-bar:last-child {
@@ -87,8 +92,8 @@ img {
 }
 
 .img-wall .img-bar img {
-  height: 32vh;
-  width: auto;
+  width: 32vh;
+  height: auto;
   margin-left: 5vw;
 }
 

@@ -3535,6 +3535,10 @@ react@^16.9.0:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
 
+reactide-config@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/reactide-config/-/reactide-config-1.0.2.tgz#6d38a815fbf4ba36f5e5da63b4e4ee553668129a"
+
 read-pkg-up@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/read-pkg-up/-/read-pkg-up-1.0.1.tgz#9d63c13276c065918d57f002a57f40a1b643fb02"
