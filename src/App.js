@@ -141,7 +141,7 @@ const App = () => (
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import Slick from 'react-slick'
-import BeautyMarquee from './BeautyMarquee/BeautyMarquee'
+import BeautyMarquee from 'react-beauty-marquee'
 import './reset.css'
 import './App.css'
 ReactDOM.render(<App />, document.getElementById('app'))

@@ -119,7 +119,6 @@ const run_marquee = (MarqueeController, reverse, UlRef, vertical, item_size,  du
     repeat: -1,
     ease: Power0.easeNone
   })
-  // MarqueeController.kill()
 }
 
 const get_gap = (gap, item_size, box_size, windowWidth) => {
