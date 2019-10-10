@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/dist
 /.pnp
 .pnp.js
 
@@ -21,3 +22,13 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+package-lock.json
+yarn.lock
+webpack.prod.js
+webpack.dev.js
+webpack.config.js
+index.html
+App.css
+App.js
+reset.css
+images
