@@ -121,10 +121,6 @@ const run_marquee = (MarqueeController, reverse, UlRef, vertical, item_size,  du
   })
 }
 
-const get_gap = (gap, item_size, box_size, windowWidth) => {
-  return typeof gap === 'number' ? gap : item_size > box_size ? (50 * windowWidth) / 1920 : 0
-}
-
 const hoverToToggle = (MarqueeController, hover, stopWhenHover) => () => {
   if (!stopWhenHover) return
 
@@ -141,7 +137,7 @@ const hoverToToggle = (MarqueeController, hover, stopWhenHover) => () => {
 
 
 
-import React, { Component, useState, useRef, useEffect, useContext } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { Power0, TimelineMax } from 'gsap'
 import { useWindowSize } from './WindowSizeContext'
 import { ResetStyle, MarqueeBox, MarqueeList, MarqueeItem, MarqueeText } from './styleComp'
