@@ -20,13 +20,15 @@ const BeautyMarquee = ({
 }) => {
   if (!turn_on) return <>{children}</>
 
+  const MarqueeController = new TimelineMax()
+
   useEffect(() => {
     setTimeout(() => {
       set_ref_size()
     }, 3)
 
     if (box_size > 0 && item_size > 0) {
-      run_marquee()
+      run_marquee(MarqueeController)
     }
   }, [windowWidth, box_size, item_size])
 
@@ -39,8 +41,8 @@ const BeautyMarquee = ({
         vertical={vertical}
         reverse={reverse}
         className="beauty-marquee-box"
-        onMouseOver={hoverToToggle(true, stop_on_box_hover)}
-        onMouseLeave={hoverToToggle(false, stop_on_box_hover)}
+        onMouseOver={hoverToToggle(true, stop_on_box_hover, MarqueeController)}
+        onMouseLeave={hoverToToggle(false, stop_on_box_hover, MarqueeController)}
       >
         <MarqueeList vertical={vertical} className="beauty-marquee-list" ref={setUlRef}>
           {Array(2)
@@ -51,11 +53,11 @@ const BeautyMarquee = ({
                 item_size={item_size}
                 className="beauty-marquee-item"
                 key={`index-${index + 1}`}
-                ref={setLiRef}
               >
                 <MarqueeText
-                  onMouseOver={hoverToToggle(true, stop_on_content_hover)}
-                  onMouseLeave={hoverToToggle(false, stop_on_content_hover)}
+                  ref={setLiRef}
+                  onMouseOver={hoverToToggle(true, stop_on_content_hover, MarqueeController)}
+                  onMouseLeave={hoverToToggle(false, stop_on_content_hover, MarqueeController)}
                 >
                   {children}
                 </MarqueeText>
@@ -78,7 +80,6 @@ const logicBox = withHandlers(() => {
   let BoxRef
   let UlRef
   let LiRef
-  const MarqueeController = new TimelineMax()
 
   return {
     set_ref_size: ({ vertical, set_box_size, set_item_size }) => () => {
@@ -98,7 +99,7 @@ const logicBox = withHandlers(() => {
       mobile_speed,
       desktop_speed,
       windowWidth
-    }) => () => {
+    }) => (MarqueeController) => {
       const duration = get_duration({
         item_size,
         windowWidth,
@@ -117,7 +118,7 @@ const logicBox = withHandlers(() => {
         ease: Power0.easeNone
       })
     },
-    hoverToToggle: ({ stop_on_box_hover }) => (hover, stopWhenHover) => () => {
+    hoverToToggle: ({ stop_on_box_hover }) => (hover, stopWhenHover, MarqueeController) => () => {
       if (!stopWhenHover) return
 
       if (hover) {
@@ -154,18 +155,29 @@ import { Power0, TimelineMax } from 'gsap'
 import { useWindowSize } from './WindowSizeContext'
 import { ResetStyle, MarqueeBox, MarqueeList, MarqueeItem, MarqueeText } from './styleComp'
 export default compose(
-  mapProps((props) => ({
-    desktop_speed: props.desktop_speed || 200,
-    mobile_speed: props.mobile_speed || 100,
-    vertical: props.vertical || false,
-    reverse: props.reverse || false,
-    stop_on_box_hover: props.stop_on_box_hover || false,
-    stop_on_content_hover: props.stop_on_content_hover || false,
-    turn_on: props.turn_on || true,
-    children: props.children,
-    windowWidth: useWindowSize().width
-  })),
+  mapProps(
+    ({
+      desktop_speed = 200,
+      mobile_speed = 100,
+      vertical = false,
+      reverse = false,
+      stop_on_box_hover = false,
+      stop_on_content_hover = false,
+      turn_on = true,
+      children
+    }) => ({
+      desktop_speed,
+      mobile_speed,
+      vertical,
+      reverse,
+      stop_on_box_hover,
+      stop_on_content_hover,
+      turn_on,
+      children,
+      windowWidth: useWindowSize().width
+    })
+  ),
   stateBox1,
   stateBox2,
-  logicBox,
+  logicBox
 )(BeautyMarquee)
